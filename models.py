@@ -1,21 +1,28 @@
-from keras.models import Sequential,  Model
-from keras.layers import Convolution2D,Input,BatchNormalization,Conv2D,Activation,Lambda,Subtract,Conv2DTranspose, PReLU
-from keras.regularizers import l2
-from keras.layers import  Reshape,Dense,Flatten
+import tensorflow 
+
+# 由于tensorflow已经将keras包括在内，所以这里的版本应该是tensorflow.keras的形式
+# keras is a part of tensorflow now, so we need use "tensorflow.keras" to make full use of it.
+
+from tensorflow.keras.models import Sequential,  Model          
+from tensorflow.keras.layers import Convolution2D,Input,BatchNormalization,Conv2D,Activation,Lambda,Subtract,Conv2DTranspose, PReLU
+from tensorflow.keras.regularizers import l2
+from tensorflow.keras.layers import  Reshape,Dense,Flatten
 # from keras.layers.advanced_activations import LeakyReLU
-from keras.callbacks import ModelCheckpoint
-from keras.optimizers import SGD, Adam
+from tensorflow.keras.callbacks import ModelCheckpoint
+from tensorflow.keras.optimizers import SGD, Adam
 from scipy.io import loadmat
-import keras.backend as K
+import tensorflow.keras.backend as K
 # from keras.layers.advanced_activations import LeakyReLU
-from keras.callbacks import ModelCheckpoint
-from keras.optimizers import SGD, Adam
+from tensorflow.keras.callbacks import ModelCheckpoint
+from tensorflow.keras.optimizers import SGD, Adam
 import numpy as np
 import math
 from scipy import interpolate
 #from scipy.misc import imresize
 import os
-from tqdm import tqdm
+# 这里是一个库，可以直接在环境里面直接使用pip install tqdm进行下载使用
+# here is a brand new tool,we can use "pip install tqdm" and use it
+from tqdm import tqdm    
 
 
 def psnr(target, ref):
@@ -85,7 +92,7 @@ def interpolation(noisy, SNR, Number_of_pilot, interp):
     interp_noisy = np.concatenate((interp_noisy[:,:,:,0], interp_noisy[:,:,:,1]), axis=0).reshape(80000, 72, 14, 1)  
     return interp_noisy
 
-def SRCNN_model():
+def SRCNN_model():     # SRCNN 模型
 
     input_shape = (72,14,1)
     x = Input(shape = input_shape)
