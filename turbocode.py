@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as np   ###good
 import random
 import commpy.channelcoding.turbo as dturbo
 import commpy.channelcoding.convcode as cc
