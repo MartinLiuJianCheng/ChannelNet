@@ -1,4 +1,4 @@
-from keras.models import Sequential,  Model
+from keras.models import Sequential,  Model   ####good job
 from keras.layers import Convolution2D,Input,BatchNormalization,Conv2D,Activation,Lambda,Subtract,Conv2DTranspose, PReLU,Conv1D
 from keras.regularizers import l2
 from keras.layers import  Reshape,Dense,Flatten
