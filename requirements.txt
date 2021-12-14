@@ -85,3 +85,4 @@ Werkzeug==2.0.1
 widgetsnbextension==3.5.1
 wrapt==1.12.1
 zipp==3.4.1
+当然有很多版本不一定一致，需要不断地卸载一些版本，主要是h5py==2.10.0一定要一致
