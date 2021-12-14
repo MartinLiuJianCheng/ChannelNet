@@ -32,8 +32,9 @@ The pipeline is based on [SRCNN](http://mmlab.ie.cuhk.edu.hk/projects/SRCNN.html
   publisher={IEEE}
 }
 ```
-     
-########     
+         
 
-**数据集是不够的，在原来的论文里面，数据集是拿来训练使用的，需要自己制造0-30db的数据集**
+**数据集是不够的，在原来的论文里面，数据集是拿来训练使用的，需要自己制造0-30db的数据集**  
+**调整参数**  
+**我的qq：2285830341**
 
